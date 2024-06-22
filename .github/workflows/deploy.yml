@@ -16,8 +16,7 @@ jobs:
           username: ${{ secrets.SSH_USR }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            whoami
             mkdir testq
             cd testq
-            git clone https://github.com/u21513768/testrepo.git
+            git clone https://github.com/COS301-SE-2024/IoT-DIRfram.git
             echo 'Deployment successful'
