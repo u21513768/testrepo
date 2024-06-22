@@ -1,0 +1,50 @@
+.dashboard {
+  display: flex;
+  flex-direction: column; /* Ensure header and content stack vertically */
+  height: 100vh; /* Make sure the dashboard takes full height of the viewport */
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  margin-left: 0; /* Ensure content stays to the right of the sidebar */
+  transition: margin-left 0.3s ease; /* Smooth transition for content shift */
+}
+
+.devices-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.devices-title {
+  margin: 0;
+  font-size: 24px;
+}
+
+.view-all-button {
+  padding: 8px 16px;
+  background-color: transparent;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.view-all-button:hover {
+  font-style: italic;
+}
+
+.section-break {
+  border: 0;
+  height: 1px;
+  background: #ccc;
+  margin: 20px 0;
+}
+
+.devices-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Ensure devices wrap to the next line */
+  gap: 20px; /* Add space between grid items */
+  padding: 20px;
+}
