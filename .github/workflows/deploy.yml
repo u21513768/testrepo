@@ -9,14 +9,10 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy NodeJS App
-        uses: appleboy/ssh-action@v0.1.2
+      - name: executing remote ssh commands using ssh key
+        uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.SSH_HOST }}
-          key: ${{ secrets.SSH_KEY }}
           username: ${{ secrets.SSH_USR }}
-          script: |
-            mkdir testq
-            cd testq
-            git clone git@github.com:u21513768/testrepo.git
-            echo 'Deployment successful'
+          key: ${{ secrets.SSH_KEY }}
+          script: whoami
